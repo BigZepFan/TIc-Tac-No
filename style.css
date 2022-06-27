@@ -1,0 +1,222 @@
+* {
+  background-color: black;
+}
+* body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.board {
+  display: grid;
+  align-content: center;
+  width: 400px;
+  height: 400px;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  cursor: pointer;
+  position: relative;
+}
+.cell {
+  border-color: chartreuse;
+  border-style: solid;
+  border-spacing: 2px;
+  border-radius: 8px;
+  font-size: 5.5em;
+  font-family: "Fascinate";
+  color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#a00,
+#b10,
+#c20 {
+  border-left: none;
+}
+#a00,
+#a01,
+#a02 {
+  border-top: none;
+}
+#a02,
+#b12,
+#c22 {
+  border-right: none;
+}
+#c20,
+#c21,
+#c22 {
+  border-bottom: none;
+}
+.winner-row-1 {
+  width: 100%;
+  height: 10px;
+  top: 15%;
+}
+.winner-row-2 {
+  width: 100%;
+  height: 10px;
+  top: 48%;
+}
+
+.winner-row-3 {
+  width: 100%;
+  height: 10px;
+  top: 83%;
+}
+.winner-column-1 {
+  height: 100%;
+  width: 10px;
+  left: 15%;
+}
+.winner-column-2 {
+  height: 100%;
+  width: 10px;
+  left: 48%;
+}
+.winner-column-3 {
+  height: 100%;
+  width: 10px;
+  left: 83%;
+}
+.winner-diagonal-1 {
+  width: 90%;
+  height: 8px;
+  top: 50%;
+  left: 5%;
+  transform: skewY(45deg);
+}
+.winner-diagonal-2 {
+  width: 90%;
+  height: 8px;
+  top: 50%;
+  left: 5%;
+  transform: skewY(-45deg);
+}
+#winner {
+  position: absolute;
+  background-color: fuchsia;
+}
+#gameover-notice {
+  text-align: center;
+  border: blueviolet 12px dotted;
+  margin-top: 15px;
+  padding: 25px;
+}
+.hidden {
+  display: none;
+}
+.visible {
+  display: block;
+}
+.x-over:hover::after {
+  content: "X";
+  color: blueviolet;
+}
+.o-over:hover::after {
+  content: "O";
+  color: orange;
+}
+h1 {
+  color: fuchsia;
+  text-align: center;
+  font-family: Fascinate;
+  font-size: 3.7em;
+  text-shadow: 2px 4px 4px dodgerblue;
+}
+h2 {
+  color: dodgerblue;
+  font-family: "Squada One", cursive;
+  font-size: 2em;
+  text-align: center;
+}
+/* header,
+.TTitle {
+  display: inline;
+  /* border-bottom: 8px;
+  border-color: blue;
+  box-shadow: 1.2em; 
+}*/
+
+*/ .wrapper {
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.players {
+  /* height: 15px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  background-color: dodgerblue;
+  border: solid chartreuse;
+  font-family: "Squada One";
+  color: white;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 18px;
+  cursor: pointer;
+}
+.placeholder {
+  background-color: black;
+  padding: auto;
+}
+input {
+  color: dodgerblue;
+  font-size: 1em;
+}
+/* .reset {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+/* .gamereset {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+.currentPlayers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Squada One";
+  color: orangered;
+  font-size: 1.8em;
+  padding-right: 12px;
+}
+/* .player input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+/* .players {
+  padding: 0px;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+} */
+
+/* TIC-TAC-TOE
+As users playing a two player game we want to: 
+
+enter our names and have them displayed
+have our order chosen for us by the game
+take turns placing our marks in empty spaces
+not be able to place our marks in an occupied space
+be told when a move causes a player to win, or to draw
+start the game over without having to reset the browser
+As a user playing a one player game I want to:
+
+see the name 'Computer' displayed as my opponent
+have the Computer player make moves as if it were a human player with the correct mark in an empty space
+As a user playing a single player game I would be delighted to:
+
+have the Computer make 'better-than-guessing' choices when placing a mark on the board
+set the board size myself ("wider" or "taller" than 3x3) */
