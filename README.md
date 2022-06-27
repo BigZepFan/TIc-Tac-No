@@ -1,3 +1,3 @@
-# TIc-Tac-Nope
-Attempted to make a game
-lost in the woods JavaScript
+# TIc-Tac-Nope ~
+# Attempted to make a game ~
+# Lost in the woods JavaScript
