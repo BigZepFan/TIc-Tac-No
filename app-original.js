@@ -1,7 +1,23 @@
+// console.log("FIX THE NAME INPUT DUDE");
+
 let gameState = {
   player1: null,
   player2: null,
 };
+let inputP1Name = document.getElementById("p1Name");
+let inputP2Name = document.getElementById("p2Name");
+let button = document.querySelector("#button1");
+let player1 = document.getElementById("player1");
+let player2 = document.getElementById("player2");
+
+button.addEventListener("click", function (e) {
+  const P1Name = inputP1Name.value;
+  const P2Name = inputP2Name.value;
+  player1.innerText = P1Name;
+  player2.innerText = P2Name;
+
+  // console.log("you clicked it");
+});
 // let gameState = {
 //   board: [
 //     [null, null, null],
