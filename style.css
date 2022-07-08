@@ -146,9 +146,9 @@ h2 {
   justify-content: center;
 }
 
-.players {
+.players .currentPlayers {
   /* height: 15px; */
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
 }

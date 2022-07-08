@@ -1,14 +1,35 @@
+// let gameState = {
+//   currentPlayer: "X",
+//   board: [
+//     [null, null, null],
+//     [null, null, null],
+//     [null, null, null],
+//   ],
+//   player1Name: "",
+//   player2Name: "",
+//   gameState: "playing",
+// };
+
+//   ******************* neww***********
+
 let gameState = {
-  currentPlayer: "X",
-  board: [
-    [null, null, null],
-    [null, null, null],
-    [null, null, null],
-  ],
-  player1Name: "",
-  player2Name: "",
-  gameState: "playing",
+  player1: null,
+  player2: null,
 };
+let inputP1Name = document.getElementById("p1Name");
+let inputP2Name = document.getElementById("p2Name");
+let button = document.getElementById("button1");
+let player1 = document.getElementById("player1");
+let player2 = document.getElementById("player2");
+
+button.addEventListener("click", function (e) {
+  const P1Name = inputP1Name.value;
+  const P2Name = inputP2Name.value;
+  player1.innerText = P1Name;
+  player2.innerText = P2Name;
+});
+
+//************************end of NEW ********************
 
 const cellSelect = document.querySelectorAll(".cell");
 const PLAYER_X = "X";
@@ -26,13 +47,13 @@ gameBoard.addEventListener(
     // console.log(typeof e.target.id);
     const index = +e.target.id;
     [i];
-  },
+  }
   // boardState.fill(null);
 
   // The elements and stuff
 
   // Used arrow syntax - broke it now matter what :(
-  cells.forEach((cell) => cell.addEventListener("click", cellClick))
+  cell.forEach((cell) => cell.addEventListener("click", cellClick))
 );
 
 function cellClick(event) {
@@ -68,7 +89,7 @@ function renderBoard() {
     currDiv.innerText = gameState.board[i];
   }
 }
-inputForm.addEventListener("submit", function (e) {
+inputForm.addEventListener("inputForm", function (e) {
   e.preventDefault();
 
   /* This prevents the page from auto reloading */
@@ -130,3 +151,8 @@ function render() {
   player1Display.innerText = gameState.player1;
   player2Display.innerText = gameState.player2;
 }
+
+// TESTING PREVENT ↓
+//var form = document.getElementById("myForm");
+// function handleForm(event) { event.preventDefault(); }
+// form.addEventListener('submit', handleForm);
